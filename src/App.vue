@@ -24,6 +24,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+  *{
+   font-family: 'Montserrat', sans-serif;
+  }
+
   .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);

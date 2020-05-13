@@ -41,6 +41,7 @@ export default {
     .info-head{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        margin: 1rem 0 1rem 0;
 
          &--options{
             grid-column: 2/12;
