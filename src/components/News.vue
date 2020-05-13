@@ -26,9 +26,10 @@
      <div class="blocos">    
          <div class="chamadas" v-for='noticia in noticias' :key='noticia.articles'>
             <div v-for='materia in noticia' :key='materia.title' >
-               <div v-if='materia.urlToImage'>
+               <div v-if='materia.urlToImage' class="bloc">
                   <a :href="materia.url"><img :src="materia.urlToImage" class="thumb"></a>
-                  <a :href="materia.url"><h2 class="materiaSub">{{materia.title}}</h2></a>       
+                  <a :href="materia.url"><h2 class="materiaSub">{{materia.title}}</h2></a>     
+                  <a :href="materia.url"><p>{{materia.description}}</p></a>      
                </div>     
             </div>    
          </div>      
@@ -37,9 +38,9 @@
      <div class="bloquinho">
           <div class="chamadinha" v-for='noticia in noticias' :key='noticia.articles'>
             <div v-for='materia in noticia' :key='materia.title' >
-               <div v-if='materia.urlToImage'>
+               <div v-if='materia.urlToImage' class="bloc">
                   <a :href="materia.url"><img :src="materia.urlToImage" class="mini-thumb"></a>
-                  <a :href="materia.url"><h5>{{materia.title}}</h5></a>       
+                  <a :href="materia.url"><h5>{{materia.title}}</h5></a>   
                </div>     
             </div>    
          </div>   
@@ -87,7 +88,7 @@ export default {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       row-gap: 15px;
-      column-gap: 10px;
+      column-gap: 25px;
    }
 
    .manchete{
@@ -109,7 +110,7 @@ export default {
    .bloquinho::before{
       border-top: 1px solid #ccc;
       display: inline-block;
-      margin: 1rem 0 1rem 0 1rem;
+      margin: 1rem 0 1rem 0;
       content: "";
       width: 100%;
    }
@@ -122,7 +123,7 @@ export default {
    .blocos::before{
       border-top: 1px solid #ccc;
       display: inline-block;
-      margin: 1rem 0 1rem 0 1rem;
+      margin: 1rem 0 1rem 0 ;
       content: "";
       width: 100%;
    }
@@ -130,7 +131,8 @@ export default {
    .chamadas{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      column-gap: 15px;
+      column-gap: 25px;
+     
    }
 
    .mini-thumb{
@@ -147,7 +149,12 @@ export default {
    }
       
    .materiaSub{
+      margin: .6rem 0 .5rem 0;
       font-size: 1rem;
+   }
+
+   .bloc{
+      margin: .7rem 0 .7rem 0;
    }
 
    .title{
