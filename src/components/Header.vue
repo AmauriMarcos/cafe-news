@@ -5,8 +5,21 @@
     </nav>
     <div class="info-head">
         <div class="info-head--options">
-            <h2>LOGO</h2>
-            <p>Usuario e Senha</p>
+            <div class="myLogo">
+                <svg class="icon">
+                     <use xlink:href=".././../public/img/sprite.svg#icon-renren"></use>
+                </svg>
+                <div class="dizeres">
+                    <span class="dizeres__cafe">KFÉ</span>
+                    <span class="dizeres__conteudo">o melhor conteúdo</span>
+                </div> 
+            </div>
+           
+            <div class="cadastro">
+                <input type="text" class="cadastro__usuario" placeholder="Usuário">
+                <input type="text" class="cadastro__senha" placeholder="Senha">
+                <button class="cadastro__btn">Entrar</button>
+            </div>
             <p>Cotacoes</p>
             <p>Tempo</p>
             <p>Busca</p>       
@@ -54,5 +67,71 @@ export default {
             border: 2px solid rgb(37, 37, 37);
         }
     }
-   
+
+    .myLogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon{
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: firebrick;
+    }
+
+    .dizeres{
+        display: flex;
+        flex-direction: column;
+
+        &__cafe{
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+
+        &__conteudo{
+            margin: 0;
+            transform: translateY(-1rem);
+            font-weight: 600;
+        }
+    }
+
+
+
+    .cadastro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__usuario{
+            
+        }
+
+        &__senha{
+
+        }
+
+        &__senha,
+        &__usuario{
+            width: 120px;
+            height: 40px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        &__btn{
+            width: 110px;
+            height: 40px;
+            background: linear-gradient(to right, #D10104, rgb(255, 231, 14));
+            color: white;
+            text-transform: uppercase;
+            font-size: .8rem;
+        }
+    }
+
+    ::placeholder{
+         transform: translateX(1rem);
+        font-size: .9rem;
+    }
+    
 </style>
