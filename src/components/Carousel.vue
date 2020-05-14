@@ -8,7 +8,8 @@
             :src="item.src"
             reverse-transition="fade-transition"
             transition="fade-transition"
-        ><h2 class="corousel-titulo">{{chamada[i].title}}</h2></v-carousel-item>
+        ><h2 class="corousel-titulo">{{chamada[i].title}}</h2>
+        </v-carousel-item>
         </v-carousel>
     </v-app>
     </div>
