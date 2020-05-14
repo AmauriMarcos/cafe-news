@@ -20,7 +20,12 @@
                 <input type="text" class="cadastro__senha" placeholder="Senha">
                 <button class="cadastro__btn">Entrar</button>
             </div>
-            <p>Cotacoes</p>
+
+            <div class="cotacoes">
+                <Cotacoes></Cotacoes>
+            </div>
+            
+
             <p>Tempo</p>
             <p>Busca</p>       
         </div>   
@@ -30,8 +35,11 @@
 </template>
 
 <script>
+import Cotacoes from "./Cotacoes";
 export default {
-    
+    components: {
+        Cotacoes
+    }
 }
 </script>
 
@@ -127,6 +135,12 @@ export default {
             text-transform: uppercase;
             font-size: .8rem;
         }
+    }
+
+    .cotacoes{
+        display: flex;
+        justify-content: start;
+        align-items: center;
     }
 
     ::placeholder{

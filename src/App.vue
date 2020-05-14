@@ -15,6 +15,7 @@ import Advertisement from "./components/Advertisement";
 import Coronavirus from "./components/Coronavirus";
 import Carousel from "./components/Carousel";
 
+
 export default {
     components: {
       News,
