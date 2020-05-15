@@ -26,7 +26,9 @@
             </div>
             
 
-            <p>Tempo</p>
+            <div class="weather">
+                <Weather></Weather>
+            </div>
             <p>Busca</p>       
         </div>   
         <hr>  
@@ -36,9 +38,11 @@
 
 <script>
 import Cotacoes from "./Cotacoes";
+import Weather from "./Weather";
 export default {
     components: {
-        Cotacoes
+        Cotacoes,
+        Weather
     }
 }
 </script>
@@ -138,6 +142,12 @@ export default {
     }
 
     .cotacoes{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .weather{
         display: flex;
         justify-content: start;
         align-items: center;
