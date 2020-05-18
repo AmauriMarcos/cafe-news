@@ -24,12 +24,16 @@
             <div class="cotacoes">
                 <Cotacoes></Cotacoes>
             </div>
-            
-
+        
             <div class="weather">
                 <Weather></Weather>
             </div>
-            <p>Busca</p>       
+
+
+            <div class="busca">
+                <input type="text" class="busca__input" placeholder="Busque no KFÉ">
+                <v-icon class="busca__icon">fas fa-search</v-icon>
+            </div>       
         </div>   
         <hr>  
     </div>
@@ -72,6 +76,7 @@ export default {
             grid-column: 2/12;
             display: flex;
             justify-content: space-around;
+            align-items: center;
         }
 
         hr{
@@ -141,16 +146,27 @@ export default {
         }
     }
 
-    .cotacoes{
+    .cotacoes,
+    .weather,
+    .busca{
         display: flex;
         justify-content: start;
         align-items: center;
     }
 
-    .weather{
-        display: flex;
-        justify-content: start;
-        align-items: center;
+    .busca{
+        border: 1px solid #ccc;
+        width: 245px;
+        height: 40px;
+      
+        &__input{
+            padding: .5rem 0 .5rem 0;
+            outline: none;
+        }
+
+        &__icon{
+            font-size: 1rem !important;
+        }
     }
 
     ::placeholder{

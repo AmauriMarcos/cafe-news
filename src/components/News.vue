@@ -36,8 +36,8 @@
      </div>
 
      <div class="bloquinho">
-          <div class="chamadinha" v-for='noticia in noticias' :key='noticia.articles'>
-            <div v-for='materia in noticia' :key='materia.title' >
+          <div class="chamadinha" v-for='esporte in esportes' :key='esporte.articles'>
+            <div v-for='materia in esporte' :key='materia.title' >
                <div v-if='materia.urlToImage' class="bloc">
                   <a :href="materia.url"><img :src="materia.urlToImage" class="mini-thumb"></a>
                   <a :href="materia.url"><h5>{{materia.title}}</h5></a>   
@@ -56,7 +56,8 @@ export default {
      return{
        noticias: [],
        error: '',
-       littleArray: []
+       littleArray: [],
+       esportes: []
      }
    },
    methods:{
@@ -70,12 +71,21 @@ export default {
          }) 
       },
       showArray(arr){
-         this.littleArray = arr.slice(2,6);
-         
+         this.littleArray = arr.slice(2,6);   
+      },
+      getSportData(){
+          axios.get("http://newsapi.org/v2/top-headlines?country=br&category=health&apiKey=5103814d494c414f952bfe5f2290191e")
+         .then(response => {
+            this.esportes= response.data;
+         })
+         .catch(error =>{
+            this.error = error;
+         }) 
       }
    },
    mounted(){
       this.getData();
+      this.getSportData();
    }
 };
 </script>

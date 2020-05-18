@@ -53,7 +53,7 @@ export default {
                 title: 'Tudo o que você precisa saber antes de visitar o Lago Moraine'
             },
             {
-                title: 'O que torna os cães tão especiais e bem-sucedidos? Amor.'
+                title: 'O que torna os cães tão especiais e bem-sucedidos?'
             },
             {
                 title: 'O sucesso monumental de GTA 5 - terá impacto na futura Rockstar'

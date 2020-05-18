@@ -11,7 +11,7 @@
                 </button>     
             </div>
             <div class="temperatura">
-                 {{sayHi()}} °C 
+                 {{showTemperature()}} °C 
             </div>
              <div class="descricao">
                  <p class="descricao__texto">{{weather.weather[0].description}}</p>
@@ -53,7 +53,7 @@ export default {
             })
 
          },
-         sayHi(){
+         showTemperature(){
              let temperatura = this.weather.main.temp -  273.15;
              temperatura =  Math.round(temperatura);
              return temperatura 
